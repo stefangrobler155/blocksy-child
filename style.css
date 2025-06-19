@@ -1,0 +1,132 @@
+/*
+Theme Name: Blocksy Child
+Theme URI: https://creativethemes.com/blocksy/
+Author: Stefan
+Author URI: https://yourwebsite.com
+Description: A child theme for the Blocksy theme.
+Template: blocksy
+Version: 1.0
+*/
+
+/* You can add your custom CSS below */
+/* === Global === */
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #fdfdfd;
+  color: #222;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* === Hero Section === */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+  color: #fff;
+}
+
+.headline {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #3f51b5;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #f0f0f0;
+}
+
+/* === Why GraphQL === */
+.why-graphql-section {
+  background: #fff;
+}
+
+.why-graphql-section h2 {
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.feature-list li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+}
+
+/* === Example Section === */
+.example-section {
+  background: #f5f5f5;
+}
+
+.code-box {
+  background: #272822;
+  color: #f8f8f2;
+  padding: 20px;
+  border-radius: 6px;
+  font-family: monospace;
+  overflow-x: auto;
+}
+
+/* === How To Section === */
+.how-to-section ol {
+  padding-left: 20px;
+  font-size: 1.1rem;
+}
+
+.how-to-section ol li {
+  margin-bottom: 10px;
+}
+
+/* === CTA Section === */
+.cta-section {
+  text-align: center;
+  background: #e0f7fa;
+  padding: 80px 20px;
+}
+
+.btn-secondary {
+  background: #00796b;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #004d40;
+}
+

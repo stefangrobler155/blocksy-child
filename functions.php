@@ -12,20 +12,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Enqueue parent and child theme styles
  */
 function blocksy_child_enqueue_styles() {
-    // Load parent theme style
-    wp_enqueue_style(
-        'blocksy-parent-style',
-        get_template_directory_uri() . '/style.css'
-    );
-
-    // Load child theme style
     wp_enqueue_style(
         'blocksy-child-style',
         get_stylesheet_directory_uri() . '/style.css',
-        array('blocksy-parent-style')
+        array(),
+        wp_get_theme()->get('Version')
     );
 }
-add_action( 'wp_enqueue_scripts', 'blocksy_child_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'blocksy_child_enqueue_styles', 100 );
 
 /**
  * Enqueue GSAP and custom animation scripts
@@ -59,3 +53,10 @@ function blocksy_child_enqueue_scripts() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'blocksy_child_enqueue_scripts' );
+
+function blocksy_child_register_menus() {
+  register_nav_menus( array(
+    'main-menu' => __( 'Main Menu', 'blocksy-child' )
+  ));
+}
+add_action( 'after_setup_theme', 'blocksy_child_register_menus' );

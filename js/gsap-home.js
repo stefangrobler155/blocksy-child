@@ -98,3 +98,45 @@ gsap.from(".btn-secondary", {
   duration: 0.6,
   ease: "back.out(1.7)"
 });
+// ✅ Animate header on scroll direction
+const header = document.querySelector(".site-header");
+
+if (header) {
+  let lastScrollY = window.scrollY;
+
+  ScrollTrigger.create({
+    start: 0,
+    end: "max",
+    onUpdate: (self) => {
+      const direction = self.direction;
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 100) {
+        if (direction === 1) {
+          // Scrolling down
+          gsap.to(header, {
+            y: "-100%",
+            duration: 0.3,
+            ease: "power2.out"
+          });
+        } else {
+          // Scrolling up
+          gsap.to(header, {
+            y: "0%",
+            duration: 0.3,
+            ease: "power2.out"
+          });
+        }
+      } else {
+        // At top
+        gsap.to(header, {
+          y: "0%",
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      }
+
+      lastScrollY = currentScrollY;
+    }
+  });
+}

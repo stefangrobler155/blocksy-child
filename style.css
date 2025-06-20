@@ -27,11 +27,12 @@ body {
 }
 /* === Custom Header === */
 .site-header {
-  background: #ffffff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  background: #fff;
+  transition: transform 0.3s ease;
 }
 
 .header-inner {
